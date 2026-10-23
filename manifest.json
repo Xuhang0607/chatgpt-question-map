@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT 提问地图",
+  "version": "1.1.0",
+  "description": "在 ChatGPT 右侧显示提问地图，搜索并快速跳转到当前对话中的问题。内容仅在本地处理。",
+  "permissions": ["storage"],
+  "icons": {"16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png"},
+  "action": {
+    "default_title": "ChatGPT 提问地图",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+    "js": ["history.js", "content.js"],
+    "run_at": "document_idle"
+  }]
+}

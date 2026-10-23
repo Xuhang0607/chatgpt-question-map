@@ -1,0 +1,12 @@
+{
+  "name": "chatgpt-question-map",
+  "version": "1.1.0",
+  "private": true,
+  "description": "An Edge extension that adds a searchable question map to ChatGPT conversations.",
+  "scripts": {
+    "check": "node tests/check.cjs",
+    "test": "node tests/smoke.cjs"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": { "playwright": "1.62.1" }
+}
